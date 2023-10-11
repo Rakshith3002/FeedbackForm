@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hwb(178 21% 14%);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid hwb(0 1% 95%);
+            border-radius: 4px;
+        }
+
+        .radio-label {
+            font-weight: normal;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .consent {
+            font-weight: normal;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Feedback</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Product Name:</label>
+                <input type="text" id="product" name="product" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">How would you rate your overall experience with our product?</label><br>
+                <label class="radio-label"><input type="radio" name="experience" value="Excellent" required> Excellent</label>
+                <label class="radio-label"><input type="radio" name="experience" value="Very Good" required> Very Good</label>
+                <label class="radio-label"><input type="radio" name="experience" value="Good" required> Good</label>
+                <label class="radio-label"><input type="radio" name="experience" value="Fair" required> Fair</label>
+                <label class="radio-label"><input type="radio" name="experience" value="Poor" required> Poor</label>
+            </div>
+            <div class="form-group">
+                <label for="positive">Please share any specific positive experiences you've had with our product:</label>
+                <textarea id="positive" name="positive"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="improvement">Please share any specific areas where you think we could improve our product:</label>
+                <textarea id="improvement" name="improvement"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="goals">Were you able to achieve your goals using our product?</label><br>
+                <label class="radio-label"><input type="radio" name="goals" value="Yes" required> Yes</label>
+                <label class="radio-label"><input type="radio" name="goals" value="No" required> No</label>
+            </div>
+            <div class="form-group">
+                <label for="recommend">Would you recommend our product to others?</label><br>
+                <label class="radio-label"><input type="radio" name="recommend" value="Yes" required> Yes</label>
+                <label class="radio-label"><input type="radio" name="recommend" value="No" required> No</label>
+            </div>
+            <div class="form-group">
+                <label>Rate the following aspects of our product on a scale of 1 to 5:</label><br>
+                <label class="radio-label">User-Friendliness: <input type="number" name="user-friendliness" min="1" max="5" required></label><br>
+                <label class="radio-label">Performance: <input type="number" name="performance" min="1" max="5" required></label><br>
+                <label class="radio-label">Customer Support: <input type="number" name="customer-support" min="1" max="5" required></label>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments or Suggestions:</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="consent"><input type="checkbox" name="consent" required> I consent to the use of my feedback for improving the product and understand that my personal information will be kept confidential.</label>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
